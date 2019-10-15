@@ -1,0 +1,35 @@
+body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs3SjqC0EWbqpDGVx8zIZupyHoKLFC5W6y3ac4a3EtfwsmMYOxUg");
+    font-family: sans-serif;
+}
+.site{
+    display : grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: "header" "main" "footer";
+}
+
+.header{
+    grid-area: header;
+}
+.board{
+    display : flex;
+    border : 2px black;
+    flex-wrap: wrap;
+}
+.cell{
+display : flex;    
+margin:5px;
+background-color:greenyellow;
+line-height: 200px;
+width: 200px;
+}
+.footer{
+    grid-area : footer;
+    justify-content: center;
+    
+}
+button{
+    height: 200px;
+    width: 200px;
+    background-image: url("https://i7.pngguru.com/preview/995/723/750/game-icon-button-game-video-game-game-buttons-thumbnail.jpg");
+}
