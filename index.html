@@ -14,11 +14,12 @@
         <header class="header">
             <h1>Tic-Tac-Toe</h1>
             <button class="start" type="submit">Start Game</button>
-            <button class="end" type="submit">End Game</button>
+            <button id="score">Score</button>
             <button class="restart" type="submit" onClick="restartf()">Restart Game</button>
         </header>
-        <main>
-         <div class="board">
+        <p class= "player1">Player 1</p>
+        <p class= "player2">Player 2</p>
+        <div class="board">
                 <div class="cell" id='0'></div>
                 <div class="cell" id='1'></div>
                 <div class="cell" id='2'></div>
@@ -29,7 +30,7 @@
                 <div class="cell" id='7'></div>
                 <div class="cell" id='8'></div>
          </div>
-        </main>
+        
      <footer class="footer">@Tic-Tac-Toe</footer>
     </div>
     <script src="js/game.js"></script>
