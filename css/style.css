@@ -12,6 +12,7 @@ body{background-image: url("https://buffer.com/library/wp-content/uploads/2016/0
 .header{
     grid-area: header;
     margin: auto;
+    color: white;
 }
 .player1{
     grid-area: mainl;
@@ -30,6 +31,8 @@ body{background-image: url("https://buffer.com/library/wp-content/uploads/2016/0
     width: 400px;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 40px 30px #0ff;
+    /*BOX-SHADOW*/
 }
 .player2{
     grid-area: mainr;
@@ -46,36 +49,17 @@ height: 100px;
 width: 100px;
 font-size: 500%;
 justify-content: center;
+box-shadow: 0 0 40px 30px #0ff;
 }
-
 .boxButton{
-    background-image: url("https://c7.uihere.com/files/995/723/750/game-icon-button-game-video-game-game-buttons.jpg");
+    background-image: url("https://media0.giphy.com/media/26xBJDUnO2zgHSkZG/source.gif");
     /* background-size: contain; */
     background-repeat: no-repeat;
     height: 100px;
     width: 100px;
+    box-shadow: 0 0 40px 30px #0ff;
 }
-button{
-background-color:blue;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-family: sans-serif;
-}
-.footer{
-    grid-area : footer;
-    justify-content: center;
-    text-align: center;
-    margin:auto;
-    font-family: sans-serif;
-}
-.drawpopup{
+button.drawpopup{
     display: none;
     width: 200px;
     top: 300px;
@@ -90,4 +74,50 @@ background-color:blue;
     color: white;
     font-size: 2em;
  }
- 
+ /* RIPPLE EFFECT FOR BUTTONS */
+button{
+ background-color:blue;
+ position:relative;
+  border: none;
+  color: white;
+  /* padding: 15px 32px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: sans-serif; 
+  padding: 20px;
+  width: 200px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.8s;
+  overflow: hidden;
+  cursor: pointer;
+}
+button:after {
+    content: "";
+    background: red;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+.footer{
+    grid-area : footer;
+    justify-content: center;
+    text-align: center;
+    margin:auto;
+    color:white;
+    font-family: sans-serif;
+}

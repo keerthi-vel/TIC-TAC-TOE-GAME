@@ -2,6 +2,8 @@ const moves = [];
 let turn = 0;
 var p1 =0;
 var p2 =0;
+let p1var = "X";
+let p2var = "O";
 const play1 = document.querySelector('p.player1');
 const play2 = document.querySelector('p.player2');
 const c= document.querySelector('.board'); 
@@ -17,12 +19,12 @@ for (let i = 0; i < boardValue.length; i++) {
         console.log('the id clicked on', this.getAttribute('id'));
         if (turn % 2 === 0 && turn < 9)
         {
-            if (moves[this.id] !== 'O' && moves[this.id]!== 'X') 
+            if (moves[this.id] !== p2var && moves[this.id]!== p1var) 
             {
-                moves[this.id] = 'X';
-                this.innerText = 'X';
+                moves[this.id] = p1var;
+                this.innerText = p1var;
                 console.log('Player1 is playing');
-                if(moves[0] === 'X' && moves[1] === 'X' && moves[2] === 'X'|| moves[3] === 'X' && moves[4] === 'X' && moves[5] === 'X'|| moves[6] === 'X' && moves[7] === 'X' && moves[8] === 'X'|| moves[0] === 'X' && moves[3] === 'X' && moves[6] === 'X'|| moves[1] === 'X' && moves[4] === 'X' && moves[7] === 'X'|| moves[2] === 'X' && moves[5] === 'X' && moves[8] === 'X'|| moves[0] === 'X' && moves[4] === 'X' && moves[8] === 'X'|| moves[2] === 'X' && moves[4] === 'X' && moves[6] === 'X')
+                if(moves[0] === p1var && moves[1] === p1var && moves[2] === p1var|| moves[3] === p1var && moves[4] === p1var && moves[5] === p1var|| moves[6] === p1var && moves[7] === p1var && moves[8] === p1var|| moves[0] === p1var && moves[3] === p1var && moves[6] === p1var|| moves[1] === p1var && moves[4] === p1var && moves[7] === p1var|| moves[2] === p1var && moves[5] === p1var && moves[8] === p1var|| moves[0] === p1var && moves[4] === p1var && moves[8] === p1var|| moves[2] === p1var && moves[4] === p1var && moves[6] === p1var)
                 {    p1 = p1+1;
                     //alert(" Player 1 wins");
                     console.log('Player 1 wins',p1);  
@@ -33,12 +35,12 @@ for (let i = 0; i < boardValue.length; i++) {
         }
         else
         {
-            if (moves[this.id] !== 'X' && moves[this.id] !== 'O') 
+            if (moves[this.id] !== p1var && moves[this.id] !== p2var) 
             {
-                    moves[this.id] = 'O';
-                    this.innerText = 'O';
+                    moves[this.id] = p2var;
+                    this.innerText = p2var;
                     console.log('Player2 is playing');
-                    if(moves[0] === 'O' && moves[1] === 'O' && moves[2] === '0'|| moves[3] === 'O' && moves[4] === 'O' && moves[5] === 'O'|| moves[6] === 'O' && moves[7] === 'O' && moves[8] === 'O'|| moves[0] === 'O' && moves[3] === 'O' && moves[6] === 'O'|| moves[1] === 'O' && moves[4] === 'O' && moves[7] === 'O'|| moves[2] === 'O' && moves[5] === 'O' && moves[8] === 'O'|| moves[0] === 'O' && moves[4] === 'O' && moves[8] === 'O'|| moves[2] === 'O' && moves[4] === 'O' && moves[6] === 'O')
+                    if(moves[0] === p2var && moves[1] === p2var && moves[2] === '0'|| moves[3] === p2var && moves[4] === p2var && moves[5] === p2var|| moves[6] === p2var && moves[7] === p2var && moves[8] === p2var|| moves[0] === p2var && moves[3] === p2var && moves[6] === p2var|| moves[1] === p2var && moves[4] === p2var && moves[7] === p2var|| moves[2] === p2var && moves[5] === p2var && moves[8] === p2var|| moves[0] === p2var && moves[4] === p2var && moves[8] === p2var|| moves[2] === p2var && moves[4] === p2var && moves[6] === p2var)
                 {   p2 = p2+1;
                     //alert(" Player2 wins");
                     console.log('player2 wins', p2);
@@ -67,18 +69,18 @@ for (let i = 0; i < boardValue.length; i++) {
     },{once : true});
 }
 function restartf() {
-    window.location.reload()
+    setTimeout(function(){ window.location.reload() }, 800);
+    
 }
 function choose1() {
     var person1 = prompt("Please choose your symbol", " ");
     if (person1 != null) {
-      let k1 = document.getElementById("demo1").innerHTML = person1;
+        p1var = document.getElementById("demo1").innerHTML = person1;
     }
   }
   function choose2() {
     var person2 = prompt("Please choose your symbol", " ");
     if (person2 != null) {
-      let k2 = document.getElementById("demo2").innerHTML = person2;
-      //"Player2 Symbol " +"Player1 Symbol " +
+      p2var = document.getElementById("demo2").innerHTML = person2;
     }
   }
