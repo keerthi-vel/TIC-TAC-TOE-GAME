@@ -1,4 +1,4 @@
-body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs3SjqC0EWbqpDGVx8zIZupyHoKLFC5W6y3ac4a3EtfwsmMYOxUg");
+body{background-image: url("https://buffer.com/library/wp-content/uploads/2016/06/giphy.gif");
     font-family: sans-serif;
 }
 .site{
@@ -6,7 +6,6 @@ body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 2fr 1fr; 
     grid-template-areas: ". header ." "mainl main mainr " ". footer .";
-    /* grid-template-areas: "header" "main" "footer"; */
     grid-gap: 10px;
     justify-content: space-between;
 }
@@ -17,12 +16,14 @@ body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9
 .player1{
     grid-area: mainl;
     margin:auto;
-    
+    font-size: 40px;
+    text-align: center;
+    color: white;
 }
 .board{
     display : flex;
     flex-wrap: wrap;
-    background-color: green;
+    background-color: blue;
     grid-area: main;/*we are telling this board clas belongs to grid area: main*/
     margin: auto;
     height: 400px;
@@ -33,24 +34,60 @@ body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9
 .player2{
     grid-area: mainr;
     margin: auto;
+    font-size: 40px;
+    text-align: center;
+    color: white;
 }
 .cell{
 display : flex;    
 margin : 10px;
-background-color:lightgreen;
+background-color: blueviolet;
 height: 100px;
 width: 100px;
 font-size: 500%;
 justify-content: center;
+}
+
+.boxButton{
+    background-image: url("https://c7.uihere.com/files/995/723/750/game-icon-button-game-video-game-game-buttons.jpg");
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+}
+button{
+background-color:blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: sans-serif;
 }
 .footer{
     grid-area : footer;
     justify-content: center;
     text-align: center;
     margin:auto;
+    font-family: sans-serif;
 }
-button{
-    background-image: url("https://i7.pngguru.com/preview/995/723/750/game-icon-button-game-video-game-game-buttons-thumbnail.jpg");
-    height :100px;
-    width :100px;
-}
+.drawpopup{
+    display: none;
+    width: 200px;
+    top: 300px;
+    background-color: blue;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+ }
+ 

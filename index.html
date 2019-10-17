@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +7,15 @@
     <title>TIC-TAC-TOE</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <div class="site">
         <header class="header">
             <h1>Tic-Tac-Toe</h1>
-            <button class="start" type="submit">Start Game</button>
+            <button id="demo1" onclick="choose1()">player1</button>
+            <button id="demo2" onclick="choose2()">player2</button>
             <button id="score">Score</button>
-            <button class="restart" type="submit" onClick="restartf()">Restart Game</button>
+            <button id="restart" type="submit" onClick="restartf()">Restart Game</button>
+            
         </header>
         <p class= "player1">Player 1</p>
         <p class= "player2">Player 2</p>
@@ -30,8 +30,10 @@
                 <div class="cell" id='7'></div>
                 <div class="cell" id='8'></div>
          </div>
-        
-     <footer class="footer">@Tic-Tac-Toe</footer>
+         <div class="drawpopup">
+                <div class="text"></div>
+            </div>
+     <footer class="footer">#Tic-Tac-Toe@keerthi-2019</footer>
     </div>
     <script src="js/game.js"></script>
 </body>
