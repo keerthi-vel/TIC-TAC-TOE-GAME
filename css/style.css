@@ -100,7 +100,7 @@ button:after {
     opacity: 1;
     transition: 0s
   }
-.footer{
+footer{
     grid-area : footer;
     justify-content: center;
     text-align: center;
