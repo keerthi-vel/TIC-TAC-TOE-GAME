@@ -52,6 +52,7 @@ for (let i = 0; i < boardValue.length; i++) {
         //console.log(moves, 'moves');
         turn++;
         const win = document.getElementById('score');
+    //check win condition for score board
     win.addEventListener('click',function(){
         if(p1>p2)
          {win.innerText="Player1 won";
@@ -69,9 +70,9 @@ for (let i = 0; i < boardValue.length; i++) {
     },{once : true});
 }
 function restartf() {
-    setTimeout(function(){ window.location.reload() }, 800);
-    
+    setTimeout(function(){ window.location.reload() }, 800);   
 }
+//players choose tokens
 function choose1() {
     var person1 = prompt("Please choose your symbol", " ");
     if (person1 != null) {
