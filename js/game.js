@@ -49,15 +49,15 @@ for (let i = 0; i < boardValue.length; i++) {
                 }
             }
         }    
-        console.log(moves, 'moves');
+        //console.log(moves, 'moves');
         turn++;
         const win = document.getElementById('score');
     win.addEventListener('click',function(){
         if(p1>p2)
-         {win.innerText="Player1 won game";
+         {win.innerText="Player1 won";
          }
         else if(turn===9 && p1===0 && p2===0){
-            win.innerText = "draw";
+            win.innerText = "Draw";
             var drawpop = document.querySelector(".drawpopup");
            drawpop.style.display = "block";
            document.querySelector(".text").innerHTML = "TIE GAME!! NO ONE WINS!";

@@ -44,7 +44,9 @@ body{background-image: url("https://buffer.com/library/wp-content/uploads/2016/0
 .cell{
 display : flex;    
 margin : 10px;
-background-color: blueviolet;
+background-image: url("https://thumbs.gfycat.com/JuicySociableAstrangiacoral-small.gif");
+/* background-color: blueviolet; */
+
 height: 100px;
 width: 100px;
 font-size: 500%;
@@ -59,21 +61,6 @@ box-shadow: 0 0 40px 30px #0ff;
     width: 100px;
     box-shadow: 0 0 40px 30px #0ff;
 }
-button.drawpopup{
-    display: none;
-    width: 200px;
-    top: 300px;
-    background-color: blue;
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-size: 2em;
- }
  /* RIPPLE EFFECT FOR BUTTONS */
 button{
  background-color:blue;
@@ -97,7 +84,7 @@ button{
 }
 button:after {
     content: "";
-    background: red;
+    background:blueviolet;
     display: block;
     position: absolute;
     padding-top: 300%;
@@ -121,3 +108,18 @@ button:after {
     color:white;
     font-family: sans-serif;
 }
+.drawpopup{
+    display: none;
+    width: 200px;
+    top: 300px;
+    background-color: blue;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+ }
